@@ -1,0 +1,81 @@
+<%@ Master Language="VB" CodeFile="Readers.master.vb" Inherits="Readers" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Delta Blogs</title>
+    <link href="../HomePageStyle2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form id="form1" runat="server">
+    <div>
+    <table class="PageBoundingBox" cellspacing="0" cellpadding="0" width="100%" align="left">
+  <tr>
+    <td><!-- Begin Header Area -->
+	<div class="container">
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top">
+          <td class="logo"><a href="http://www.delta.edu" title="Delta College Home Page">
+          <img src="images/system/default_logo.gif" alt="Delta College" width="234" height="53" border="0" /></a></td>
+          <td class="globalBlock">
+		  	<span class="globalTopLinks"><a href="http://www.delta.edu/internal/atoz.aspx" title="A-Z Index">A-Z Index</a> 
+			<a href="http://www3.delta.edu/EventsCalendar/index.aspx" title="Calendar">Calendar</a> 
+			<a href="http://www.delta.edu/pages/702.aspx" title="Alumni">Alumni</a> 
+			<a href="https://public.delta.edu/peoplefinder/Pages/search.aspx" title="People Finder">People Finder</a> 
+			<a href="mailto:info@delta.edu" title="Contact Us">Contact Us</a></span>
+			
+		  </td>
+        </tr>
+      </table>
+	</div>
+	<div class="container">
+	      <ul id="gnav">
+			  <li><a href="http://www.delta.edu/pages/689.aspx">Student Engagement</a></li>
+			  <li><a href="https://mydelta3c.delta.edu/WebAdvisor/WebAdvisor?TYPE=P&amp;PID=ST-WSEI">Class Search</a></li>
+			  <li><a href="http://www.delta.edu/pages/11825.aspx">Future Students</a></li>
+			  <li><a href="http://www.delta.edu/pages/10113.aspx">Jobs @ Delta</a></li>
+			  <li><a href="https://public.delta.edu/catalog/Pages/Programs.aspx">View our Programs</a></li>
+			  <li><a href="http://www.delta.edu/pages/125.aspx">About Delta</a></li>
+          </ul>
+	</div>
+	
+	
+<table class="ContentBoundingBox" cellspacing="0" cellpadding="0" width="100%">
+<tr valign="top">
+<td class="MainContent" width="100%">
+
+<div class="pageContainer"> 
+
+
+  
+<div id="blogHeaderGreenHeader" class="blogHeaderGreenHeader">
+<span></span><span style="font-size: 14pt">Sign Up Health Monitoring</span><br />
+     &nbsp;&nbsp;&nbsp; &nbsp;Use this page to monitor the health of this applicaiton.</div>
+<div id="blogHeaderBlackHeader" class="blogHeaderBlackHeader">
+</div>     
+    <div class="blogContainer" id="blogContainer">
+        &nbsp;</div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</div>  
+
+<div class="containerBreaker">
+
+</div>
+<div class="bgBreaker">
+<div class="container">
+</div></div>
+</td>
+<!-- END MAIN Column Content Area -->
+
+</tr></table>
+	  <!-- End Header Area -->
+	  </td> </tr> </table> 
+    </div>
+    <asp:HiddenField ID="hidePassword" runat="server" />
+    <asp:HiddenField ID="hideSSN" runat="server" />
+    </form>
+</body>
+</html>
+

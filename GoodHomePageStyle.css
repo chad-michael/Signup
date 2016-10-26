@@ -1,0 +1,545 @@
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 10pt;
+ background-color: #025239;
+ margin: 0px;
+}
+div.homeBranding
+{
+
+    background-color: white;
+    text-align: center;
+}
+
+
+div.Eraug
+{
+    text-align: left;
+    list-style-position: outside;
+    list-style-type: decimal;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+.Eraug li
+{
+    margin-top: 10px;
+}
+
+
+div.homebranding2
+{
+
+    background-color: white;
+  
+}
+div.PageContent
+{
+    text-align: left;
+}
+
+
+div.ResultsTopInfo
+{
+    font-size: 12pt;
+    color: olivedrab;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+div.InfoHeaderLinks
+{
+    font-weight: normal;
+    font-size: 10pt;
+    text-align: left;
+    margin: 30px 10px 30px;
+}
+
+.InfoHeaderLinks A
+{
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: left;
+  
+}
+
+
+div.NoSuccess
+{
+    background-image: url(images/system/NoSuccess.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 385px;
+    padding-bottom: 20px;
+    padding-top: 70px;
+    margin-bottom: 25px;
+    text-align: left;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: gray;
+    border-bottom-style: solid;
+    overflow: auto;
+}
+
+
+div.CenterInfo
+{
+    background-image: url(images/system/tableBGWithText.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 385px;
+    padding-bottom: 20px;
+    padding-top: 70px;
+    margin-bottom: 25px;
+    text-align: left;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: gray;
+    border-bottom-style: solid;
+    overflow: auto;
+}
+
+div.TopTable
+{
+    background-image: url(images/system/TopTable.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 150px;
+    padding-top: 30px;
+    margin-bottom: 25px;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: gray;
+    border-bottom-style: solid;
+    text-align: left;
+}
+
+div.NoHeaderTable
+{
+    background-image: url(images/system/EmptyTopTable.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 150px;
+    padding-top: 30px;
+    margin-bottom: 25px;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: gray;
+    border-bottom-style: solid;
+    text-align: left;
+}
+
+div.TopTable
+
+{
+    font-weight: bold;
+}
+
+div.CenterInfoContent
+{
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 520px;
+    margin-left: 32px;
+    text-align: left;
+  
+}
+div.BottomTable
+{
+    background-image: url(images/system/BottomTable.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 150px;
+    margin-bottom: 25px;
+    padding-top: 30px;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: gray;
+    border-bottom-style: solid;
+    text-align: left;
+}
+
+div.BottomTable SPAN
+{
+    font-weight: bold;
+}
+
+div.PinTable
+{
+    background-image: url(images/system/PinTable.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 150px;
+    margin-bottom: 25px;
+    padding-top: 30px;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-top-style: solid;
+    border-top-color: gray;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: gray;
+    border-bottom-style: solid;
+    text-align: left;
+}
+
+div.PinTable SPAN
+{
+    font-weight: bold;
+}
+
+div.InfoHeader
+{
+    width: 600px;
+    height: 50px;
+    background-color: white;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: left;
+}
+/*CORE LAYOUT*/
+div.PageBoundingBox {
+	width: 100%;
+}
+div.ContentBoundingBox {
+	clear: both;
+	background-image: url(https://www.delta.edu/images/system/background.gif);
+	background-repeat: repeat;
+	width: 100%;
+	min-height:550px;
+}
+div.BodyContent {
+	padding-top: 5px;
+	background-color: #FFFFFF;
+}
+div.container {
+	width: 759px;
+	margin: auto;
+}
+div.containerBreaker {
+	background-color: #025239;
+	color: #fff;
+	width: 100%;
+	height: 28px;
+	margin-top: 5px;
+}
+/*GLOBAL HEADER*/
+td.logo {
+	width: 234px;
+	padding: 0px;
+}
+td.globalBlock {
+	text-align: right;
+	font-size: 7.5pt;
+	padding-top: 2px;
+}
+td.globalBlock a:link, td.globalBlock a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+td.globalBlock a:hover {
+	text-decoration: underline;
+}
+span.globalTopLinks a {
+	padding-left: 20px;
+}
+form.searchform {
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+}
+select.selectquicklink {
+	width: 148px;
+	font-size: 8pt;
+}
+input.inputsearch {
+	width: 140px;
+	font-size: 8pt;
+}
+/*GLOBAL NAV*/
+ul#gnav {
+	list-style-type: none;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	text-align: right;
+	height: auto;
+}
+ul#gnav li {
+	display: inline;
+}
+ul#gnav a:link, ul#gnav a:visited {
+	padding: 4px 10px 4px 10px;
+	clear: none;
+	margin-left: 5px;
+	color: #fff;
+	text-decoration: none;
+	background-color: #427D42;
+	border-right: 1px solid #77BB77;
+	border-top: 1px solid #77BB77;
+	border-left: 1px solid #77BB77;
+	font-weight: bold;
+	font-size: 8pt;
+	float: right;
+}
+ul#gnav a:hover {
+	background-color: #77BB77;
+}
+/*BRANDING BLOCK*/
+div.futureStudents {
+	width: 220px;
+}
+div.futureStudents h1 {
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	font-size: 17pt;
+	font-weight: normal;
+	color: #883322;
+}
+ul.futureStudents {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	line-height: 17px;
+}
+ul.futureStudents li {
+	background-image: url('https://www.delta.edu/images/system/arrow1.gif');
+	background-repeat: no-repeat;
+	padding-left: 15px;
+}
+div.futureStudents li a:link, div.futureStudents li a:visited {
+	font-size: 8pt;
+	font-weight: bold;
+}
+div.applyOnline {
+	margin-top: 10px;
+}
+div.learnMore {
+	background-image: url('https://www.delta.edu/images/system/bg_learnmore.gif');
+	width: 139px;
+	height: 109px;
+	text-align: left;
+	margin-top: 9px;
+}
+div.learnMore h1 {
+	padding: 10px 0px 0px 15px;
+	margin: 0px;
+	font-size: 12pt;
+	color: #000;
+}
+div.learnMore ul {
+	list-style-type: none;
+	padding: 5px 0 0 15px;
+	margin: 0;
+	line-height: 1em;
+}
+div.learnMore ul li {
+	background-image: url('https://www.delta.edu/images/system/arrowlearnmore.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding-left: 10px;
+}
+div.learnMore a:link, div.learnMore a:visited {
+	font-size: 7pt;
+	font-weight: bold;
+}
+/*CONTENT*/
+div.bgBreaker {
+	background-image: url('https://www.delta.edu/images/system/bgBreaker.gif');
+	background-repeat: repeat-x;
+	background-position: top;
+	width: 100%;
+}
+div.containerBreaker h1 {
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 0;
+	height: 28px;
+}
+td.interest {
+	background-image: url('https://www.delta.edu/images/system/rightgradient.gif');
+	background-position: top right;
+	background-repeat: repeat-y;
+}
+div.welcomeContainer {
+}
+h1.welcometitle {
+}
+h1.interestTitle {
+	border-left: 1px solid #fff;
+	padding-left: 10px;
+}
+td.news {
+	background-image: url('https://www.delta.edu/images/system/bgHomenews.gif');
+	background-repeat: repeat-x;
+	background-position: top right;
+}
+h1.newsTitle {
+	padding-left: 10px;
+}
+div.interestContainer {
+}
+div.newsContainer {
+	color: #000;
+}
+table.MainContent {
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+}
+div.welcomeContent {
+	color: #505050;
+	background-image: url('https://www.delta.edu/images/system/bg_welcome.gif');
+	background-repeat: no-repeat;
+	background-position: top right;
+	height: 235px;
+	padding: 10px 7px 0 0;
+	font-size: 8pt;
+}
+div.interestContent {
+	background-image: url('https://www.delta.edu/images/system/bg_misc.gif');
+	background-repeat: no-repeat;
+	background-position: top right;
+	height: 235px;
+}
+div.welcomeContent p {
+	margin: 10px 0 0 0;
+	padding: 0;
+	width: 217px;
+}
+td.newsContent {
+	background-image: url('https://www.delta.edu/images/system/bgHomenewsContent.gif');
+	background-repeat: repeat-x;
+	background-position: top right;
+	background-color: #fff;
+}
+div.newsContent {
+	height: 235px;
+	font-size: 8pt;
+	margin-right: 16px;
+}
+div.interestContent ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 0;
+	line-height: 19px;
+}
+div.interestContent ul li {
+	padding: 10px 0 0 18px;
+	margin: 0;
+}
+ul.newsList {
+	list-style-type: none;
+	margin: 5px 0 0 15px;
+	padding: 0;
+	line-height: 1.7em;
+}
+ul.newsList li {
+	background-image: url('https://www.delta.edu/images/system/arrowgreen.gif');
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding-left: 10px;
+}
+/*FOOTER*/
+table.footer {
+	font-size: 7.5pt;
+	color: #fff;
+	padding-top: 5px;
+}
+table.footer a:link, table.footer a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+/*GLOBAL STYLES*/
+input, select {
+	font-size: 9pt;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	letter-spacing: -1px;
+}
+a:link, a:visited {
+	color: #5577BB;
+	text-decoration: none;
+}
+
+FIELDSET
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+
+
+.img-shadow {
+  float:left;
+  background: url(images/system/shadowAlpha.png) no-repeat bottom right !important;
+  background: url(images/system/shadow.gif) no-repeat bottom right;
+  margin: 10px 0 0 10px !important;
+  margin: 10px 0 0 5px;
+  }
+
+.img-shadow table{
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  margin: -6px 6px 6px -6px;
+  padding: 4px;
+  } 
+  
+
+.img-shadow img {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  margin: -6px 6px 6px -6px;
+  padding: 4px;
+  } 
+  
+  .modalPopup
+{
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px;
+    background-attachment: fixed;
+    background-image: url(images/system/SignUp_ErrorAuthenticating.gif);
+    width: 400px;
+    background-repeat: no-repeat;
+    height: 200px;
+    vertical-align: bottom;
+}
+
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+

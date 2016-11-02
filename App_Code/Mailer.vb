@@ -29,7 +29,7 @@ Public Class Mailer
 
             'body.To.Add("lucasstark@delta.edu")
             'body.To.Add("ngaeder@delta.edu")
-            body.To.Add("richardzeien@delta.edu")
+            body.To.Add("help@delta.edu")
             'body.To.Add("richardmince@delta.edu")
             body.To.Add("signup_errors@delta.edu")
 
@@ -43,8 +43,6 @@ Public Class Mailer
         Catch ex As Exception
 
         End Try
-
-
 
     End Sub
 

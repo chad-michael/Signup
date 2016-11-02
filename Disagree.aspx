@@ -1,117 +1,99 @@
 <%@ Page Language="VB" AutoEventWireup="false" CodeFile="Disagree.aspx.vb" Inherits="Disagree" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head id="Head1" runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Delta College Signup">
+    <meta name="keywords" content="Delta College, Signup">
+    <meta name="author" content="Delta College - OIT">
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <%--HTML5 shiv script in order to allow styling of HTML5 elements in older IE browsers--%>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <title>Delta College Sign Up</title>
-    <link href="HomePageStyle.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/delta-branding.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" type="img/x-icon" href="favicon.ico" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <table class="PageBoundingBox" cellspacing="0" cellpadding="0" width="100%" align="left">
-                <tr>
-                    <td>
-                        <!-- Begin Header Area -->
-                        <div class="container">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tr valign="top">
-                                    <td class="logo">
-                                        <a href="http://www.delta.edu" title="Delta College Home Page">
-                                            <img src="images/system/default_logo.gif" alt="Delta College" width="234" height="53"
-                                                border="0"></a></td>
-                                    <td class="globalBlock">
-                                        <span class="globalTopLinks">
-											<a href="http://www.delta.edu/internal/atoz.aspx" title="A-Z Index">A-Z Index</a>                                         
-											<a href="http://www3.delta.edu/EventsCalendar/index.aspx" title="Calendar">Calendar</a> 
-											<a href="http://www.delta.edu/pages/702.aspx" title="Alumni">Alumni</a> 
-											<a href="https://public.delta.edu/peoplefinder/Pages/search.aspx" title="People Finder">People Finder</a> 
-											<a href="mailto:info@delta.edu" title="Contact Us">Contact Us</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="container">
-                            <ul id="gnav">
-								<li><a href="http://www.delta.edu/pages/689.aspx">Student Engagement</a></li>
-								<li><a href="https://mydelta3c.delta.edu/WebAdvisor/WebAdvisor?TYPE=P&amp;PID=ST-WSEI">Class Search</a></li>
-								<li><a href="http://www.delta.edu/pages/11825.aspx">Future Students</a></li>			
-								<li><a href="http://www.delta.edu/pages/10113.aspx">Jobs @ Delta</a></li>
-								<li><a href="https://public.delta.edu/catalog/Pages/Programs.aspx">View our Programs</a></li>
-								<li><a href="http://www.delta.edu/pages/125.aspx">About Delta</a></li>
-                            </ul>
-                        </div>
-                        <table class="ContentBoundingBox" cellspacing="0" cellpadding="0" width="100%">
-                            <tr valign="top">
-                                <!-- 1 Column Style -->
-                                <!-- START MAIN Column Content Area -->
-                                <td class="MainContent" width="100%">
-                                    <div class="container" style="font-size: 8pt; font-family: Tahoma">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                            <tr valign="top">
-                                                <td class="homebranding">
-                                                    <div class="homeBranding" style="width: 95%">
-                                                    <div class="Eraug">
-                                                        <b>Electronic Resources Access and Use Guidelines<br />
-                                                            <br />
-                                                            Disagree With Terms of Access</b><br />
-                                                        <br />
-                                                        <hr />
-                                                        <br />
-                                                        <p>
-                                                            <font face="Arial, Helvetica, sans-serif">You have stated that you will not agree to
-                                                                follow our terms of access. If you change your mind, you may re-apply by following
-                                                                the same procedure. If you are registered for a class that requires the use of this
-                                                                computer, and you still do not desire to agree to our terms, we suggest that you
-                                                                drop the class.</font></p>
-                                                            <br />
-                                                            <br />
-                                                        </div>
-                                                        </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="containerBreaker">
-                                        <div class="container">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contentTitles">
+    <div class="body-container">
+        <header class="logo">
+            <a href="https://www.delta.edu">
+                <img src="images/DeltaLogo.png" class="header-logo" alt="Delta College logo" />
+            </a>
+        </header>
+        <form id="form1" runat="server">
+            <div>
+                <table class="PageBoundingBox">
+                    <tr>
+                        <td>
+                            <table class="ContentBoundingBox">
+                                <tr>
+                                    <!-- 1 Column Style -->
+                                    <!-- START MAIN Column Content Area -->
+                                    <td class="MainContent">
+                                        <div class="container" style="font-size: 8pt; font-family: Tahoma">
+                                            <table>
                                                 <tr>
-                                                    <td width="252" class="welcome">
-                                                        <div class="welcomeContainer">
-                                                            <h1 class="welcomeTitle">
-                                                            </h1>
-                                                        </div>
-                                                    </td>
-                                                    <td width="190" class="interest">
-                                                        <div class="interestContainer">
-                                                            <h1 class="interestTitle">
-                                                            </h1>
-                                                        </div>
-                                                    </td>
-                                                    <td class="news">
-                                                        <div class="newsContainer">
-                                                            <h1 class="newsTitle">
-                                                            </h1>
+                                                    <td class="homebranding">
+                                                        <div class="homeBranding" style="width: 95%">
+                                                            <div class="Eraug">
+                                                                <h4>Electronic Resources Access and Use Guidelines</h4>
+                                                                <h4>Disagree With Terms of Access</h4>
+                                                                <p>You have stated that you will not agree to follow our terms of access. If you change your mind, you may re-apply by following the same procedure. If you are registered for a class that requires the use of this computer, and you still do not desire to agree to our terms, we suggest that you drop the class.</p>
+                                                            </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                             </table>
                                         </div>
-                                    </div>
-                                    <div class="bgBreaker">
-                                        <div class="container">
+                                        <div class="containerBreaker">
+                                            <div class="body-container">
+                                                <table class="contentTitles">
+                                                    <tr>
+                                                        <td class="welcome">
+                                                            <div class="welcomeContainer">
+                                                                <h1 class="welcomeTitle"></h1>
+                                                            </div>
+                                                        </td>
+                                                        <td class="interest">
+                                                            <div class="interestContainer">
+                                                                <h1 class="interestTitle"></h1>
+                                                            </div>
+                                                        </td>
+                                                        <td class="news">
+                                                            <div class="newsContainer">
+                                                                <h1 class="newsTitle"></h1>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <!-- END MAIN Column Content Area -->
-                            </tr>
-                        </table>
-                        <!-- End Header Area -->
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
+                                    </td>
+                                    <!-- END MAIN Column Content Area -->
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <footer class="site-footer">
+        <p>Delta College | 1961 Delta Road, University Center, MI 48710 | 989-686-9093</p>
+    </footer>
 </body>
+<script src="Scripts/jquery-3.1.1.js"></script>
+<script src="Scripts/bootstrap.js"></script>
 </html>
-

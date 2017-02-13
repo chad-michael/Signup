@@ -1,0 +1,387 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    /*font-size: 10pt;
+    font-family: myriad-pro, sans-serif !important;
+    font-style: normal;
+    font-weight: 300;*/
+}
+
+p {
+    font-size: 12pt;
+    font-family: "font-family: myriad-pro !important;" !important;
+    font-style: normal;
+    font-weight: 300;
+    display: inline-block;
+}
+
+#Eraug > ol > li {
+    font-size: 11pt;
+    font-family: "font-family: myriad-pro !important;" !important;
+    font-weight: 300;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    /*font-size: 10pt;
+    font-family: "font-family: myriad-pro !important;" !important;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1.42857143;
+    color: black;*/
+    background-color: #fff;
+}
+
+/*table > tbody > tr > td > div > div > h2 {
+    font-family: TrendSlabOne !important;
+    height: auto;
+    color: #00704a;
+}*/
+
+h1 {
+    font-size: 40px;
+    font-family: "TrendSlabOne" !important;
+    color: #00704a !important;
+    font-weight: 100 !important;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: "TrendSlabOne" !important;
+    color: #00704a !important;
+    font-weight: 100 !important;
+}
+
+h3 {
+    font-family: "TrendSlabOne" !important;
+    color: #00704a !important;
+    font-weight: 100 !important;
+}
+
+h2 > a,
+h2 > a:visited {
+    color: #00704A;
+    /*font-size: 12pt;*/
+}
+
+    h2 > a:hover {
+        color: #7AC142;
+    }
+
+a,
+a:visited {
+    color: #00704A;
+    font-size: 12pt;
+    /*text-decoration: underline !important;*/
+}
+
+    a:hover {
+        color: #7AC142;
+    }
+
+.container {
+    width: 100%;
+    padding: 0 0 0 0;
+}
+
+.ResultsTopInfo {
+    padding-top: 2em;
+    color: #00704A;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pad-top {
+    padding-top: 2em;
+}
+
+.body-container {
+    margin-left: 15.5em;
+    margin-right: 15.5em;
+}
+
+div {
+    display: block;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -142px;
+}
+
+    .page-wrap:after {
+        content: "";
+        display: block;
+    }
+
+    .site-footer, .page-wrap:after {
+        height: 142px;
+    }
+
+.site-footer {
+    background: #00704A;
+    border-top: 8px solid #7ac142;
+    height: 15em;
+    width: 100%;
+    bottom: 0;
+    margin-top: 2.5em;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > footer > p {
+    color: white;
+    padding-top: 2em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 12pt;
+    font-family: "font-family: myriad-pro !important; Bold" !important;
+    font-style: normal;
+}
+
+.main {
+    padding-top: 3em;
+    margin-left: 12.5em;
+}
+
+.main-top {
+    padding-bottom: 1.5em;
+}
+
+.header-logo {
+    padding: 1.8em 0 1em 2.2em !important;
+}
+
+.no-border {
+    border: none;
+}
+/* Customize the nav-justified links to fill the entire space of the .navbar */
+
+.nav-justified {
+    background-color: transparent;
+    border: 1px solid transparent;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .nav-justified > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+        font-weight: bold;
+        color: #12604F;
+        text-align: center;
+        background-color: #e5e5e5; /* Old browsers */
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
+        background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+        background-image: -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+        background-image: linear-gradient(to bottom, #f5f5f5 0%,#e5e5e5 100%);
+        -webkit-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 );
+        -moz-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 );
+        -o-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+        background-repeat: repeat-x; /* Repeat the gradient */
+        border-bottom: 1px solid #12604F;
+    }
+
+    .nav-justified > .active > a,
+    .nav-justified > .active > a:hover,
+    .nav-justified > .active > a:focus {
+        background-color: transparent;
+        background-image: none;
+        -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+        -ms-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+        box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+    }
+
+    .nav-justified > li:first-child > a {
+        -ms-border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .nav-justified > li:last-child > a {
+        border-bottom: 0;
+        -ms-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
+    }
+
+@media (min-width: 768px) {
+    .nav-justified {
+        max-height: 52px;
+    }
+
+        .nav-justified > li > a {
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+        }
+
+        .nav-justified > li:first-child > a {
+            border-left: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .nav-justified > li:last-child > a {
+            border-right: 0;
+            -ms-border-radius: 0 5px 5px 0;
+            border-radius: 0 5px 5px 0;
+        }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .masthead,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.logo {
+    width: 17.5em !important;
+    height: 9.5em !important;
+    margin: 0 0 2em 0 !important;
+    background: #00704a !important;
+    -ms-border-bottom-right-radius: 15px !important;
+    -ms-border-bottom-left-radius: 15px !important;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-right-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    /*-moz-box-shadow: 0px 0px 20px #000000;
+    -webkit-box-shadow: 0px 0px 20px #000000;
+    box-shadow: 0px 0px 20px #000000;*/
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00704a', endColorstr = '#3b473c');*/
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00704a', endColorstr = '#3b473c')";*/
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    /*background-image: -moz-linear-gradient(top, #00704a, #3b473c);
+    background-image: -ms-linear-gradient(top, #00704a, #3b473c);
+    background-image: -o-linear-gradient(top, #00704a, #3b473c);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#00704a), to(#3b473c));
+    background-image: -webkit-linear-gradient(top, #00704a, #3b473c);
+    background-image: linear-gradient(top, #00704a, #3b473c);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;*/
+    background-clip: padding-box;
+    /*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
+    /*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
+}
+
+.table-responsive {
+    padding-top: 2em;
+    overflow-x: auto;
+}
+
+/* firefox- specific hack for responsive tables */
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
+}
+
+body > div > header > nav > ul > li > a {
+    background: white;
+    color: #00704A;
+}
+
+body > div > header > nav > ul > li.active > a {
+    background: white;
+    color: #12604F;
+}
+
+li {
+    padding: .5em 0 1em 0;
+}
+
+.panel-body {
+    padding: 9px;
+    padding-left: 1.8em;
+}
+
+.color-heading {
+    background: #808080 !important;
+    color: white !important;
+    padding-left: 3.5em !important;
+}
+
+#BottomTable > div > div.panel-body > table > tbody > tr > td,
+#TopTable > div > div.panel-body > table > tbody > tr > td {
+    padding-right: 1.5em;
+}
+
+#ErrorMessageText {
+    font-weight: bolder;
+    font-size: 12pt;
+    font-family: Sans;
+}
+
+#NoGoodPassword {
+    font-size: 10px;
+    font-family: inherit;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.error-heading {
+    background: #B84442;
+    color: white;
+}
+
+.panel-group {
+    width: 85em;
+}
+
+h4 {
+    padding-bottom: .5em;
+}
+
+table {
+    width: 100%;
+}
+
+.pin {
+    width: 60em;
+    /*background: #D1DFD0;*/
+}
+
+.pinHeader {
+    background: #808080;
+    color: #D1DFD0;
+    text-align: center;
+    padding: .2em 2em 0 2em;
+}
+
+.floatRight {
+    float: right;
+    padding-right: 2em;
+}
+
+.verifyTable {
+    width: 23em;
+    text-align: right;
+    padding-right: 1.5em;
+}

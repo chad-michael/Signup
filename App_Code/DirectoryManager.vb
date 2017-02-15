@@ -13,8 +13,6 @@ Namespace Stark.SignUp.AD
             Return System.Configuration.ConfigurationManager.AppSettings.Item("serviceAccountUsername")
         End Function
 
-
-
         Public Shared Function GetThisUser(ByVal UserName As String) As DirectoryEntry
             Dim de As DirectoryEntry
             Dim UserPath As String = GetUserPath(UserName)
@@ -22,11 +20,10 @@ Namespace Stark.SignUp.AD
             de = New DirectoryEntry(UserPath, GetUsername(), GetPassword(), AuthenticationTypes.Secure)
             Return de
 
-
         End Function
 
         ''' <summary>
-        ''' Provides Methods to Get a users AD Path based on their user name 
+        ''' Provides Methods to Get a users AD Path based on their user name
         ''' </summary>
         ''' <param name="UserName">The username of the user</param>
         ''' <returns>Fully Qualified AD path</returns>
@@ -39,7 +36,6 @@ Namespace Stark.SignUp.AD
             deSearch.SearchRoot = de
             deSearch.Filter = "(&(objectClass=user) (cn=" + UserName + "))"
 
-
             Dim AllResults As SearchResultCollection = deSearch.FindAll
 
             If Not AllResults.Count = 0 Then
@@ -49,8 +45,6 @@ Namespace Stark.SignUp.AD
             End If
 
         End Function
-
-
 
         '''<summary>
         ''' Method used to create an entry to the AD.
@@ -67,7 +61,6 @@ Namespace Stark.SignUp.AD
                 Return de
             End Get
         End Property
-
 
         '''<summary>
         ''' Method used to create an entry to the AD.
@@ -129,7 +122,6 @@ Namespace Stark.SignUp.AD
             End Get
         End Property
 
-
         ''' <summary>
         ''' Helper method that sets properties for AD users.
         ''' </summary>
@@ -170,8 +162,6 @@ Namespace Stark.SignUp.AD
             Return True
         End Function
 
-
-
         ''' <summary>
         ''' Method to enable a user account in the AD.
         '''</summary>
@@ -194,7 +184,7 @@ Namespace Stark.SignUp.AD
         ''' <param name="name"></param>
         ''' <param name="login"></param>
         ''' <param name="email"></param>
-        ''' <param name="group"></param> 
+        ''' <param name="group"></param>
         Public Shared Sub CreateNewUser(ByVal IDNumber As String, ByVal name As String, ByVal login As String, ByVal email As String, ByVal group As String)
 
             ' Dim catalog As New Catalog()
@@ -223,13 +213,9 @@ Namespace Stark.SignUp.AD
             '5. Add User To Student Group
             Manager.AddUserToGroup(de, newuser, "Student")
 
-
             '6. Create Users Email Account
 
-
-
         End Sub
-
 
         '''<summary>
         '''Method that formats a date in the required format
@@ -255,7 +241,6 @@ Namespace Stark.SignUp.AD
             sb.Append("000000.0Z")
             Return sb.ToString()
         End Function
-
 
         ''' <summary>
         ''' Method that returns a DataTable with a list of users modified from a given date.
@@ -284,7 +269,6 @@ Namespace Stark.SignUp.AD
             Dim result As SearchResult
             For Each result In results
 
-
                 Try
                     Dim dr As Data.DataRow = dt.NewRow()
                     Dim dey As DirectoryEntry = Manager.GetDirectoryEntry(result.Path)
@@ -299,19 +283,15 @@ Namespace Stark.SignUp.AD
 
                 End Try
 
-
-
-
             Next
 
             de.Close()
             Return dt
         End Function
 
-
         '''<summary>
         ''' Method to add a user to a group</summary>
-        ''' 
+        '''
 
         Public Shared Sub AddUserToGroup(ByVal de As DirectoryEntry, ByVal deUser As DirectoryEntry, ByVal GroupName As String)
             Dim deSearch As DirectorySearcher = New DirectoryServices.DirectorySearcher

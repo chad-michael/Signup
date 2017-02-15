@@ -9,13 +9,13 @@ $origIntelliSenseFilePath = Join-Path $toolsPath $intelliSenseFileName
 if (Test-Path $projectIntelliSenseFilePath) {
     if ((Get-Checksum $projectIntelliSenseFilePath) -eq (Get-Checksum $origIntelliSenseFilePath)) {
         # The intellisense file in the project matches the file in the tools folder, delete it
-        
+
         if ($scriptsFolderProjectItem -eq $null) {
             # No Scripts folder
             exit
         }
 
-        try {        
+        try {
             # Get the project item for the intellisense file
             $intelliSenseFileProjectItem = $scriptsFolderProjectItem.ProjectItems.Item($intelliSenseFileName)
         }

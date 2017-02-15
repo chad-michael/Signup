@@ -4,7 +4,6 @@ Partial Class results
     Private UserArgs As System.Data.DataSet
     Private ArgsCollection As Collections.Specialized.NameValueCollection
 
-
     Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Try
@@ -12,7 +11,6 @@ Partial Class results
             If Not Session.Item("UserID") Is Nothing Then
                 userInfo = Session("UserID")
             End If
-
 
             Dim userType As String = "-1"
             If Not Session.Item("UserType") Is Nothing Then
@@ -29,9 +27,7 @@ Partial Class results
             EnumTypes("-1")
         End Try
 
-
     End Sub
-
 
     Private Sub EnumTypes(ByVal type As String)
         Select Case type

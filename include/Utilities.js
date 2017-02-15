@@ -45,7 +45,7 @@ if (selectdays > monthdays) {
        dobj.options[dlp-1] = null }}
 else if (monthdays > selectdays) {
    for (var dlp=selectdays; dlp < monthdays; dlp++) {
-       dobj.options[dlp] = new Option(dlp+1,dlp+1) }}       
+       dobj.options[dlp] = new Option(dlp+1,dlp+1) }}
 if (curdy > monthdays) {
    dobj.options[monthdays-1].selected = true
    curdy = monthdays }

@@ -1,0 +1,45 @@
+﻿/*-----------------------------------------------------------------------------
+Debug
+
+* Different Color are used to outline things *
+
+version:   1.0
+author:    Chad Michael
+email:     chadmichael@delta.edu
+website:   www.delta.edu
+date:      11/16/2016
+
+Copyright 2016 Delta College - All Rights Reserved
+-----------------------------------------------------------------------------*/
+
+* {
+    outline: 2px dotted red;
+}
+
+    * * {
+        outline: 2px dotted green;
+    }
+
+        * * * {
+            outline: 2px dotted orange;
+        }
+
+            * * * * {
+                outline: 2px dotted blue;
+            }
+
+                * * * * * {
+                    outline: 1px solid red;
+                }
+
+                    * * * * * * {
+                        outline: 1px solid green;
+                    }
+
+                        * * * * * * * {
+                            outline: 1px solid orange;
+                        }
+
+                            * * * * * * * * {
+                                outline: 1px solid blue;
+                            }

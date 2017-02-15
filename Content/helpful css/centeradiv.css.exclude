@@ -1,0 +1,187 @@
+﻿body {
+}
+/*-----------------------------------------------------------------------------
+Div How Tos:
+
+version:   1.0
+author:    Chad Michael
+email:     chadmichael@delta.edu
+website:   www.delta.edu
+date:      11/16/2016
+
+Copyright 2016 Delta College - All Rights Reserved
+-----------------------------------------------------------------------------*/
+
+/*Dead Centre a div*/
+
+body {
+    margin: 0px;
+}
+
+#horizon {
+    color: white;
+    background-color: #0ff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    overflow: visible;
+    visibility: visible;
+    display: block;
+}
+
+#content {
+    position: absolute;
+    left: 50%;
+    width: 250px;
+    /* Overall width of div */
+    height: 70px;
+    /* Overall height of div */
+    top: -35px;
+    /* half of the overall height */
+    margin-left: -125px;
+    /* half of the overall width */
+    visibility: visible;
+}
+
+/* Vertical Align in a div */
+
+/* Example html:
+    <div class="wrap">
+    <div class="inner">
+    <div class="content">
+    <p>Any content vertically centered.</p>
+    </div>
+    </div>
+    </div>
+*/
+
+.wrap {
+    display: table;
+    height: 400px;
+    #width: 175px;
+    /* arbitrary width for IE only */
+    #position: relative;
+    /* for IE only */
+    overflow: hidden;
+}
+
+.inner {
+    #position: absolute;
+    /* for IE only */
+    #top: 50%;
+    /* for IE only */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content {
+    #position: relative;
+    /* for IE only */
+    #top: -50%;
+    /* for IE only */
+}
+
+.wrap,
+.content {
+    border: 1px solid green;
+}
+
+/* just borders to see it */
+
+p {
+    padding: 5px;
+}
+
+/* Center align a div horizontally and bottom of the page */
+
+HTML: <div class="parent" > <div class="child" > Content here </div > </div > CSS: .parent {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    //width should be 100%;
+}
+
+.child {
+    width: 100px;
+    //min width should give to center the div. margin: 0px auto;
+    //here it will make center;
+}
+
+div {
+    float: left;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    line-height: 148px;
+}
+
+    div img {
+        margin-top: expression(( 150 - this.height) / 2);
+    }
+
+    html > body div img {
+        /*hidden from IE 5-6 */
+        margin-top: 0;
+        /* to clean up, just in case IE later supports valign! */
+        vertical-align: middle;
+    }
+
+/* NOTE: some <script> tag, either inline or external (can be a dummy one), is needed to get IE 5.0 on track.*/
+
+/* horizontally and vertically center a DIV - V1*/
+
+.centered_div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    background: red;
+}
+
+/* horizontally and vertically center a DIV with size 500 x 200 px */
+
+.centered_div {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -100px;
+    background: red;
+}
+
+/* Center an Image Inside a div, Vertical and Horizontal, Without Knowing the Image's Size */
+
+div {
+    float: left;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    line-height: 148px;
+}
+
+    div img {
+        margin-top: expression(( 150 - this.height) / 2);
+    }
+
+    html > body div img {
+        /*hidden from IE 5-6 */
+        margin-top: 0;
+        /* to clean up, just in case IE later supports valign! */
+        vertical-align: middle;
+    }
+
+/* NOTE: some <script> tag, either inline or external (can be a dummy one), is needed to get IE 5.0 on track.

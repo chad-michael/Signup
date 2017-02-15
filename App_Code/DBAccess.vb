@@ -28,7 +28,6 @@ Namespace Stark.DAL
             End Set
         End Property
 
-
         Public Function ExecuteReader() As IDataReader
             Dim reader As IDataReader = Nothing
             Try
@@ -108,8 +107,6 @@ Namespace Stark.DAL
             End Try
             Return i
         End Function
-
-
 
         Public Function ExecuteNonQuery(ByVal commandtext As String) As Integer
             Dim i As Integer = -1

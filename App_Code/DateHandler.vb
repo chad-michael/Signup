@@ -32,7 +32,6 @@ Namespace Stark.SignUp.Utilities
             MonthsCol.Add("Nov")
             MonthsCol.Add("Dec")
 
-
             Dim IDcol As New System.Data.DataColumn
             IDcol.ColumnName = "IDCol"
             Dim MonthName As New System.Data.DataColumn
@@ -51,7 +50,6 @@ Namespace Stark.SignUp.Utilities
                 index = index + 1
                 TempMonths.Rows.Add(row)
 
-
             Next
             Months = TempMonths
 
@@ -59,7 +57,6 @@ Namespace Stark.SignUp.Utilities
 
         Public Function GetDays(ByVal month As Integer) As String
             Dim CalendarToday As New Date(System.DateTime.Today.Ticks)
-
 
             Dim DaysInMonth As Integer = Date.DaysInMonth(CalendarToday.Year, month)
             Return DaysInMonth.ToString

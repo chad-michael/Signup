@@ -1,15 +1,14 @@
 Imports Stark.SignUp.AD
 Imports Stark.BOL.Validate
-Partial Class _Default
+'''<summary>Represents an .aspx file, also known as a Web Forms page, requested from a server that hosts an ASP.NET Web application.</summary>
+Partial Class [Default]
     Inherits System.Web.UI.Page
-    Private encDisplay As String
-    Private encDisplaySSN As String
-    Protected catalogofDate As New Stark.SignUp.Utilities.DateHandler
-
+    Private _encDisplay As String
+    Private _encDisplaySsn As String
+    Protected CatalogofDate As New Stark.SignUp.Utilities.DateHandler
 
     'Protected retVal As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        
 
         Me.PanelNoSuccess.Visible = False
         Me.NoGoodPassword.Visible = False
@@ -23,21 +22,19 @@ Partial Class _Default
                 i = i + 1
             End While
 
-            Me.inputBDMonth.DataSource = catalogofDate.Months
+            Me.inputBDMonth.DataSource = CatalogofDate.Months
             Me.inputBDMonth.DataTextField = "Month"
             Me.inputBDMonth.DataValueField = "IDCol"
             Me.inputBDMonth.DataBind()
         End If
 
- 
     End Sub
 
     Protected Sub btnSubmit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSubmit.Click
         If (Page.IsValid) Then
             Dim emailer As New Mailer
 
-
-            Dim dtBirthDate As Date = New Date(Me.inputBDYear.SelectedValue, Me.inputBDMonth.SelectedValue, Me.inputBDDay.SelectedValue)
+            Dim dtBirthDate As Date = New Date(CType(inputBDYear.SelectedValue, Integer), CType(inputBDMonth.SelectedValue, Integer), CType(inputBDDay.SelectedValue, Integer))
             Dim userInfo As New Stark.BOL.Validate
             userInfo.DeltaID = Server.HtmlEncode(Me.inputTxtDeltaID.Text)
 
@@ -45,17 +42,17 @@ Partial Class _Default
             userInfo.BirthDate = dtBirthDate.Date.ToShortDateString
             userInfo.dtBirthDate = dtBirthDate
 
-            'password input validated durring validation process. 
+            'password input validated during validation process.
             userInfo.Password = inputTxtPassword.Text
             userInfo.IsValid = True
 
-            'Make sure the user is in the ERP Table 
+            'Make sure the user is in the ERP Table
             'If the are valid, the userInfo.IsValid is set to true
             DoCheckIsValid(userInfo)
 
-            GetUserPin(userInfo)            
+            GetUserPin(userInfo)
 
-            'If the user has been validated against the ERP informaton then continue
+            'If the user has been validated against the ERP information then continue
             If userInfo.IsValid Then
                 Dim passwordValidationResult As PasswordValidationResult
                 passwordValidationResult = Stark.SignUp.SignUpActions.DoCheckPassword(userInfo)
@@ -74,9 +71,9 @@ Partial Class _Default
 
             'Make sure the user is still valid to proceed.  At this point, they won't be if there password is not accepted.
             If userInfo.IsValid Then
-                'Continue to insert the record in the databae
-                'Check if their new, if so create their accounts. 
-                'Normal operation will be that the user will not be new, so we will update it. 
+                'Continue to insert the record in the database
+                'Check if their new, if so create their accounts.
+                'Normal operation will be that the user will not be new, so we will update it.
 
                 'Update SQL First.  If the update of AD fails, then we'll roll back the SQL transaction
                 If Update(userInfo) Then
@@ -101,14 +98,14 @@ Partial Class _Default
                     Else
                         Me.PanelNoSuccess.Visible = True
                         Me.ErrorMessage.Visible = True
-                        Me.ErrorMessageText.Text = "There was a problem updating your password in Active Directory. <br /><br />  If you have been admitted within the past 4 hours, your account has not been created. <br/> <br/>  Please contact the OIT help desk at 686-9575 for assistance.  Your error has been logged."
+                        Me.ErrorMessageText.Text = "<p>There was a problem updating your password in Active Directory. <br /><br />  If you have been admitted within the past 4 hours, your account has not been created. <br/> <br/>  Please contact the OIT help desk at 686-9575 for assistance.  Your error has been logged.</p>"
                         emailer.SendErrorReport("User Path is Nothing <br /> <br />Problem with User ID " & userInfo.UserID & "<br /><br/> " & userInfo.DeltaID & " <br /> <br />" & ErrorMessageText.Text)
                     End If
                 Else
-                    'Couldn't Update SQL for some reason.  
+                    'Couldn't Update SQL for some reason.
                     Me.PanelNoSuccess.Visible = True
                     Me.ErrorMessage.Visible = True
-                    Me.ErrorMessageText.Text = "There was a problem updating the database.  Please contact the OIT help desk at 686-9575 for assistance.  Your error has been logged."
+                    Me.ErrorMessageText.Text = "<p>There was a problem updating the database.  Please contact the OIT help desk at 686-9575 for assistance.  Your error has been logged.</p>"
                     emailer.SendErrorReport("<br /> <br /> Problem with User ID " & userInfo.UserID & "<br /><br/> " & userInfo.DeltaID & " <br /> <br />" & ErrorMessageText.Text)
                 End If
             Else
@@ -128,11 +125,9 @@ Partial Class _Default
         Else
             Me.PanelNoSuccess.Visible = True
             Me.ErrorMessage.Visible = True
-            Me.ErrorMessageText.Text = "All fields must be contain valid values before your new password will be accepted.  Please check that your new password meets all complexity rules and that you have correctly entered your personal information.  <br/> <br/> Please scroll down and choose a new password."
+            Me.ErrorMessageText.Text = "<p>All fields must be contain valid values before your new password will be accepted.  Please check that your new password meets all complexity rules and that you have correctly entered your personal information.  <br/> <br/> Please scroll down and choose a new password.</p>"
 
         End If
-
-
 
     End Sub
 

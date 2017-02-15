@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-     <script src="Scripts/modernizr-2.8.3.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
 
     <%--HTML5 shiv script in order to allow styling of HTML5 elements in older IE browsers--%>
     <!--[if lt IE 9]>

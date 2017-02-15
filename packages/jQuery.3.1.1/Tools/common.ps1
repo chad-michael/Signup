@@ -1,6 +1,6 @@
 function Get-Checksum($file) {
     $cryptoProvider = New-Object "System.Security.Cryptography.MD5CryptoServiceProvider"
-	
+
     $fileInfo = Get-Item $file
 	trap { ;
 	continue } $stream = $fileInfo.OpenRead()
@@ -8,15 +8,15 @@ function Get-Checksum($file) {
 		# Couldn't open file for reading
         return $null
 	}
-    
+
     $bytes = $cryptoProvider.ComputeHash($stream)
     $checksum = ''
 	foreach ($byte in $bytes) {
 		$checksum += $byte.ToString('x2')
 	}
-    
+
 	$stream.Close() | Out-Null
-    
+
     return $checksum
 }
 

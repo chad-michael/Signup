@@ -404,7 +404,6 @@ function SetPickedMonth(PickedYear, PickedMonth, PickedDay) {
 
 // The calendar object
 function calendarObject(DateName, DateFormat, DefaultDate) {
-
    /* Properties */
    this.hiddenFieldName = DateName;
    this.monthListID = DateName + '_Month_ID';

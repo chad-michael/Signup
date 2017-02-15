@@ -5,7 +5,6 @@ Namespace Stark.SignUp
     Public Class SignUpActions
         Public Shared Function DoCheckPassword(ByVal theUser As Stark.BOL.Validate) As PasswordValidationResult
 
-
             If theUser.Password.Length < 8 Then
                 theUser.PasswordCheckErrors.Append("Password is Too Short")
                 Dim resultPackage As New PasswordValidationResult("Password is Too Short", False)
@@ -17,7 +16,6 @@ Namespace Stark.SignUp
                 Return resultPackage
             End If
 
-
             Dim result As New Validation2008.ValidationResult()
             result = Validation2008.Validation.Calculate(theUser.Password, theUser.UserID)
             If Not result.Status Then
@@ -27,7 +25,6 @@ Namespace Stark.SignUp
 
             Return DoCheckOldPasswords(theUser)
 
-
         End Function
 
         Private Shared Function DoCheckOldPasswords(ByVal theUser As Stark.BOL.Validate) As PasswordValidationResult
@@ -35,7 +32,6 @@ Namespace Stark.SignUp
             db.CommandType = Data.CommandType.StoredProcedure
             db.CommandText = "ReturnPasswordSetForSignUp"
             db.AddParameter("@IDNo", theUser.DeltaID)
-
 
             Dim PassTable As New System.Data.DataTable
 
@@ -68,13 +64,9 @@ Namespace Stark.SignUp
                 db.Dispose()
             End Try
 
-
-
             Dim CheckSequence As String
             Dim StartCheckSequence As Integer = 0
             'Check to see if the password has been used for the past 5 times.
-
-
 
             'Create an instance of the encryptor class
             Dim xCryptor As SunGard.Security.Encryptor
@@ -112,7 +104,6 @@ Namespace Stark.SignUp
             Return New PasswordValidationResult("Password is valid", True)
         End Function
 
-
         Public Shared Sub DoInsert(ByVal theUser As Stark.BOL.Validate)
             Dim db As New Stark.DAL.DBAccess
             'Create the keys for the encryptor
@@ -135,7 +126,6 @@ Namespace Stark.SignUp
         Public Shared Function DoUpdate(ByVal theUser As Stark.BOL.Validate) As Boolean
             Dim db As New Stark.DAL.DBAccess
             Dim retVal As Boolean = True
-     
 
             Dim xCryptor As SunGard.Security.Encryptor
             xCryptor = SunGard.Web.Security.EncryptorHelper.GetEncryptor()
@@ -158,7 +148,6 @@ Namespace Stark.SignUp
             Return retVal
         End Function
 
-
         Public Shared Function GetExpiredPasswordUsers(ByVal lastDate As DateTime) As System.Data.DataTable
             Dim dt As New System.Data.DataTable
             Dim db As New Stark.DAL.DBAccess
@@ -170,6 +159,6 @@ Namespace Stark.SignUp
             Return dt
 
         End Function
-  
+
     End Class
 End Namespace

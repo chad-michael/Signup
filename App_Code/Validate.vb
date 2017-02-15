@@ -4,7 +4,6 @@ Imports System.Data.SqlClient
 
 Namespace Stark.BOL
 
-
     Public Class Validate
         Public Sub New()
 
@@ -145,7 +144,6 @@ Namespace Stark.BOL
             db.AddParameter("@SSN", User.SSN)
             db.AddParameter("@BirthDate", User.dtBirthDate)
 
-
             Dim UserInfoSet As System.Data.DataSet
             Try
                 UserInfoSet = db.ExecuteDataSet
@@ -182,7 +180,6 @@ Namespace Stark.BOL
                 db.Dispose()
             End Try
 
-
             Return User
         End Function
 
@@ -199,7 +196,6 @@ Namespace Stark.BOL
             db.AddParameter(idnoParam)
             db.AddParameter(outPin)
 
-
             Try
                 ''For Each a As SqlParameter In db.command.Parameters
                 ''    User.pin = User.pin + a.ParameterName
@@ -211,7 +207,6 @@ Namespace Stark.BOL
                     User.pin = ""
                 End If
 
-
             Catch ex As Exception
                 User.pin = "There was an error pulling the data" + ex.Message
             Finally
@@ -220,7 +215,6 @@ Namespace Stark.BOL
             End Try
 
         End Sub
-
 
         Public Shared Sub DoCheckIsNewUser(ByVal user As Stark.BOL.Validate)
             Dim db As New Stark.DAL.DBAccess
@@ -236,7 +230,6 @@ Namespace Stark.BOL
                 user.TypeFlag = "Insert"
             End If
 
-
         End Sub
 
         Public Shared Function Update(ByVal user As Stark.BOL.Validate) As Boolean
@@ -247,7 +240,6 @@ Namespace Stark.BOL
                 Return False
             End If
         End Function
-
 
         Public Shared Sub Insert(ByVal user As Stark.BOL.Validate)
             SignUpActions.DoInsert(user)

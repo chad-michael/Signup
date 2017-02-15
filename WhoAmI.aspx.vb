@@ -4,7 +4,6 @@ Partial Class WhoAmI
     Inherits System.Web.UI.Page
     Protected catalogofDate As New Stark.SignUp.Utilities.DateHandler
 
-
     'Protected retVal As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
@@ -33,7 +32,7 @@ Partial Class WhoAmI
         userInfo.BirthDate = dtBirthDate.Date.ToShortDateString
         userInfo.dtBirthDate = dtBirthDate
 
-        'Make sure the user is in the ERP Table 
+        'Make sure the user is in the ERP Table
         'If the are valid, the userInfo.IsValid is set to true
         userInfo = DoCheckIsValid(userInfo)
 
@@ -47,9 +46,6 @@ Partial Class WhoAmI
             Me.NoAuthentication.Visible = True
 
         End If
-
-
-
 
     End Sub
 End Class
